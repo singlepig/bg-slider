@@ -22,5 +22,6 @@ if __name__=="__main__":
         pic_num = len(pic_list) #获取壁纸目录的壁纸数量
         filename = random.randint(0,pic_num)    #随机选择一个壁纸在pic_list中的序号
         os.popen('gsettings set org.gnome.desktop.background picture-uri file://' + pic_list[filename])
-        time.sleep(60)  # step 2 
+        # step 2
+        time.sleep(60) 
         #休眠1分钟
