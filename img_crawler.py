@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 #-*- encoding: utf-8 -*-
 
 import threading
@@ -8,7 +8,7 @@ import os
 import time
 
 # Change Point 1 -下载目录，手动填写，若不存在则会自动创建文件夹，dont worry！
-download_dir = '/home/singlepig/temp/imgs/进击的巨人壁纸'
+download_dir = '/home/singlepig/picture/wallpapers/xiaoming'
 if os.path.exists(download_dir) == False:
     os.mkdir(download_dir)
 
@@ -17,16 +17,16 @@ width = 1366
 height = 768
 
 # Change Point 3 -需要爬的网页url，自行更换,末尾的'/'不能少!
-source_html = 'http://m.lovebizhi.com/category/21733/'
+source_html = 'http://m.lovebizhi.com/category/15957/'
 
 
 
 # Change Point 4 -此tag也需要根据特定情况修改alt部分
-tag = r'<img alt="进击的巨人壁纸" src="(.*?)"/>'
+tag = r'<img alt="小明壁纸" src="(.*?)"/>'
 pattern = re.compile(tag)
 '''
 在
-<li class="s_big"><a href="/share/1119685" title="所属分类：网络热词"><img alt="网络热词壁纸" src="http://s.qdcdn.com/cl/11512075,400,300.jpg"/></a></li>
+<li class="s_big"><a href="/share/1119685" title="所属分类：***"><img alt="***" src="http://s.qdcdn.com/cl/11512075,400,300.jpg"/></a></li>
 中匹配出图片url
 '''
 
